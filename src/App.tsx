@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { SiteLayout } from "./components/SiteLayout";
 import { HomePage } from "./pages/HomePage";
 import { MenuPage } from "./pages/MenuPage";
@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <SiteLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="/visit" element={<VisitPage />} />
         </Routes>
       </SiteLayout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
